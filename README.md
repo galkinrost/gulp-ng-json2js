@@ -39,19 +39,19 @@ Type: 'Sting'
 The name of the generated AngularJS module.
 
 options.prefix
-__
+--
 Type: `String`
 
 The prefix which should be prepended to the file path to generate the file url.
 
 options.stripPrefix
-__
+--
 Type: `String`
 
 The prefix which should be subtracted from the file path to generate the file url.
 
 options.rename
-__
+--
 Type: `Function`
 
 A function that allows the generate file url to be manipulated. For example:
