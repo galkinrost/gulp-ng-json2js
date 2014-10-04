@@ -5,7 +5,7 @@ The plugin to wrap `json` fixtures as an angular value
 
 What is the result?
 --
-See <a href="https://github.com/galkinrost/gulp-ng-json2js/tree/master/test/expected">here</a>
+See <a href="https://github.com/galkinrost/gulp-ng-json2js/tree/master/test/expect">here</a>
 
 Install
 --
@@ -30,6 +30,7 @@ gulp.task('fixtures',function(){
                 .pipe(concat('fixtures.js'))
                 .pipe(gulp.dest('./build/'));
 });
+```
 
 options.moduleName
 --
