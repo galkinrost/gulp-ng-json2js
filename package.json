@@ -1,0 +1,39 @@
+{
+    "name": "gulp-ng-json2js",
+    "version": "0.0.0",
+    "description": "Inspired by gulp-ng-html2js wrapper for json texture as angular values",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha -r should"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/galkinrost/gulp-ng-json2js.git"
+    },
+    "author": {
+        "name": "Galkin Rostislav",
+        "email": "galkinrost@gmail.com",
+        "url": "http://github.com/galkinrost"
+    },
+    "keywords": [
+        "gulpplugin",
+        "angular",
+        "fixtures",
+        "mock",
+        "json",
+        "value"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/galkinrost/gulp-ng-json2js/issues"
+    },
+    "dependencies": {
+        "gulp-util": "~3.0.1",
+        "through2": "~0.6.2"
+    },
+    "devDependencies": {
+        "mocha": "~1.21.4",
+        "should": "~4.0.4",
+        "vinyl": "~0.4.3"
+    }
+}
