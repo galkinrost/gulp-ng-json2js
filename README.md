@@ -61,7 +61,7 @@ function (url) {
   return url.replace('.json', '');
 }
 ```
-```
+
 AND
 ```sh
 gulp fixtures
