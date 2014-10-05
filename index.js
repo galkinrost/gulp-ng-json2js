@@ -92,5 +92,7 @@ module.exports = function (options) {
         } catch (err) {
             this.emit('error', new gutil.PluginError('gulp-ng-json2js', err));
         }
+
+        done();
     });
 };
