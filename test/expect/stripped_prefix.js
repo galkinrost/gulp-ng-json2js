@@ -4,7 +4,7 @@
     } catch (e) {
         module = angular.module('TestFixtures', []);
     }
-    module.value('Test', {
+    module.value('TestValue', {
     "username": "Barack",
     "nation": "USA",
     "work": "peacemaking"

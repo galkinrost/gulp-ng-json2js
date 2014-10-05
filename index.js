@@ -20,6 +20,7 @@ var VALUE_TPL =
  * @property options.rename {Function} A method to convert a json filepath to a values`s name
  * @property options.stripPrefix {String} Path`s prefix will be stripped
  * @property options.prefix {String} A prefix to file`s path
+ * @property options.postfix {String} A value`s name postfix
  * @returns {*}
  */
 module.exports = function (options) {
@@ -27,6 +28,7 @@ module.exports = function (options) {
 
     options = options || {};
     options.moduleName = options.moduleName || 'json';
+    options.postfix = options.postfix || 'Value';
     options.rename = options.rename || function (filepath) {
         var name = '';
         var extname = path.extname(filepath);
@@ -36,7 +38,7 @@ module.exports = function (options) {
                 name += pathchunk.charAt(0).toUpperCase() + pathchunk.slice(1);
             });
 
-        return name;
+        return name + options.postfix;
     };
 
     function getFileUrl(file) {

@@ -34,7 +34,8 @@ gulp.task('fixtures',function(){
 
 options.moduleName
 --
-Type: 'Sting'
+Type: `Sting`
+Default: `json`
 
 The name of the generated AngularJS module.
 
@@ -43,6 +44,13 @@ options.prefix
 Type: `String`
 
 The prefix which should be prepended to the file path to generate the file url.
+
+options.postfix
+--
+Type: `String`
+Default: `Value`
+
+The postfix which should be append to the value name.
 
 options.stripPrefix
 --
