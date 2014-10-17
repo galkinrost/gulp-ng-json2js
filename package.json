@@ -1,6 +1,6 @@
 {
   "name": "gulp-ng-json2js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Inspired by gulp-ng-html2js wrapper for json texture as angular values",
   "main": "index.js",
   "scripts": {
