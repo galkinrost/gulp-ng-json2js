@@ -26,6 +26,28 @@ it('should create value from json file', function (cb) {
     stream.write(file);
 });
 
+it('should translate filename to camelcase', function (cb) {
+    var stream = json2js({
+        moduleName: 'TestFixtures'
+    });
+
+    var json = fs.readFileSync(path.resolve(__dirname, 'fixtures/test.json'));
+
+    var file = new File({
+        path: 'fixtures/some-test.json',
+        contents: new Buffer(json)
+    });
+
+    stream.on('data', function (data) {
+        var result = fs.readFileSync(path.resolve(__dirname, 'expect/camelcase.js'), 'utf-8');
+        data.path.should.be.equal('fixtures/some-test.js');
+        data.contents.toString().should.be.equal(result);
+        cb();
+    });
+
+    stream.write(file);
+});
+
 it('should create value from json file with stripped prefix', function (cb) {
     var stream = json2js({
         moduleName: 'TestFixtures',

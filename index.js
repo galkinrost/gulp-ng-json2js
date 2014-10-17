@@ -35,11 +35,24 @@ module.exports = function (options) {
         filepath.substring(0, filepath.length - extname.length)
             .split(path.sep)
             .forEach(function (pathchunk) {
-                name += pathchunk.charAt(0).toUpperCase() + pathchunk.slice(1);
+                name += camelize(pathchunk);
             });
 
         return name + options.postfix;
     };
+
+    function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    function camelize(str) {
+        var camelizedStr = '';
+        str.split(/[-_]+/)
+            .forEach(function (chunk) {
+                camelizedStr += capitalize(chunk);
+            });
+        return camelizedStr;
+    }
 
     function getFileUrl(file) {
         // Start with the relative file path
